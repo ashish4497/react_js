@@ -1,0 +1,9 @@
+body {
+	background-color:grey;
+	margin: 0 auto;
+}
+h1 {
+	text-align: center;
+	color:white;
+	text-transform: capitalize;
+}
