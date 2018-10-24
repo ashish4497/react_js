@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Todo extends Component {
+export class Todo extends Component {
 	render(){
 		return(
 			<div className="Todo-list">
@@ -9,11 +9,20 @@ class Todo extends Component {
 					<input type ="text"className="text-box" placeholder="What need to be done"/>
 					<button className="btn" onClick={this.props.additems}>submit</button>
 				</form>
-				<div className="item-list">
-					<li>{this.props.name}</li>
-				</div>
 			</div>
 		);
 	}
 }
-export default Todo;
+
+
+export class List extends Component {
+	render() {
+		return(
+			<div className="list-out">{this.props.itemList}
+			<input type ="checkbox" className ="check-box" onClick={this.props.toggle} data-id={this.props.dataId}/>
+			
+			</div>
+
+		)
+	}
+}
