@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import * as data from './data.json';
 import Emoji from './Emoji'
 
-class Emojisearch extends Component {
+class EmojiSearch extends Component {
 	constructor(){
 		super()
 		this.state ={
@@ -13,28 +13,31 @@ class Emojisearch extends Component {
 
 	componentWillMount(){
 		this.setState({
-			emoji : data.default
+			emoji :data.default.slice(0, 20)
 		})
 	}
 
-	findemoji=(e)=>{
-		console.log(e)
-		this.setState({info:e.target.value})
+	
+
+	findemoji = (e) =>{
+		this.setState({ info: e.target.value })
+		var filteredArray = data.default.filter(emoji => emoji.title.toLowerCase().includes(this.state.info.toLowerCase()));
+		this.setState({ emoji: filteredArray.slice(0,20) })
 	}
 
+
 	render() {
-		
+
 		return (
 
 		<div className="emoji">
 			<h1>setup</h1>
-				<input type="text" onChange={this.findemoji}/>
+			<input type="text" onChange={this.findemoji}/>
 			{
-				this.state.emoji.map(emo=> <Emoji title={emo.title} symbol={emo.symbol}/>)
+				this.state.emoji.map(emo => <Emoji title={emo.title} symbol={emo.symbol}/>)
 			}
-		<emoji />
 		</div>
 		)
 	}
 }
-export default Emojisearch;
+export default EmojiSearch;

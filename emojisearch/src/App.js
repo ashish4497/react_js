@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Emojisearch from './Searchemoji'
+import EmojiSearch from './Searchemoji'
 class App extends Component {
   render() {
     return (
       <div className="App">
-       <Emojisearch/>
+       <EmojiSearch/>
       </div>
     );
   }
