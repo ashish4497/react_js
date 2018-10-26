@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.heading{
+	font-size: 1ghjvrem;
+}
+.Karal {
+	font-family: 'Karla', sans-serif;
+	font-size: 1.5rem;
+}
+
+.Helavatica-Neue {
+	font-family:" Helavatica Neue";
+	font-size: 1.5rem;
+}
+.Beerserf {
+	font-family: 'Bree Serif', serif;
+	font-size: 1.5rem;
+}
+.loto{ 
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5rem;
+ }
+.cabin{
+	font-family: 'Cabin', sans-serif;
+	font-size: 1.5rem;
+ }
+.Mali{
+	font-size: 1.5rem;
+	font-family: 'Mali', cursive;
+}
+.Raleway{
+	font-size: 1.5rem;
+	font-family: 'Raleway', sans-serif;
+}
