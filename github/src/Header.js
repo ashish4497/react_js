@@ -9,10 +9,10 @@ class Header extends Component {
 			data:[]
 		}
 	}
-	handelEvent=(e)=>{
-		console.log(e)
-		this.setState({info:e.target.value})
-	}
+	// handelEvent=(e)=>{
+	// 	console.log(e)
+	// 	this.setState({info:e.target.value})
+	// }
 
 	getData = (e) => {
 		e.preventDefault();
