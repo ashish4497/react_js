@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import User from './User'
+import User from './User';
+
 
 class Header extends Component {
 	constructor(){
