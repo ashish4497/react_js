@@ -1,16 +1,12 @@
 import React, {Component} from 'react';
-class Follower extends Component{
-	constructor(props) {
-		super(props)
-		this.state = {
-		userFollower:[]
-	}
-	
-	}
-	render(){
-		return(
-			<h1>Follower</h1>
-		)
+
+export default class Follower extends Component {
+	render() {
+		const {data} = this.props;
+		return (
+			<div clasName="follower-user">
+				{data ? data.map(follower => <h1>{follower.login}</h1>) : ''}
+			</div>
+		);	
 	}
 }
-export default  Follower;

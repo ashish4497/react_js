@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import User from './User';
-
+import Follower from './Follower';
+import Repo from './Repositories';
 
 class Header extends Component {
 	constructor(){
 		super()
 		this.state = {
 			info:'',
-			data: {}
+			data:{},
+			userFollower : [],
+			userRepos : []
 		}
 	}
 
@@ -26,18 +29,34 @@ class Header extends Component {
 		.then(d => this.setState({
 			data: d
 		}))
-		
-	}
+		fetch(`https://api.github.com/users/${user}/followers`)
+		.then(res=>res.json())
+		.then(d => this.setState({
+			userFollower: d
+		}))
+		fetch(`https://api.github.com/users/${user}/repos`)
+		.then(res=>res.json())
+		.then(d => this.setState({
+			userRepos: d
+		}))
 
+
+	}
   render() {
   	var { data } = this.state;
   	console.log(data);
   	var item;
   	if(Object.keys(this.state.data).length === 0) {
-  		item = <div></div>
+  		item = <div></div>	
   	} else {
-  		item = <User data={this.state.data}/>
-  	}
+  		item = <div>
+  							<User data={this.state.data}/>
+  							<Follower data={this.state.userFollower}/>
+  							<Repo data ={this.state.userRepos}/>
+  					</div>
+  	 }
+  	
+  	
     return (
       <div className='header'>
       	<header className='main-head'>
@@ -52,6 +71,7 @@ class Header extends Component {
       	{
       		item
       	}
+
       </div>
     );
   }
