@@ -2,11 +2,15 @@ import React, {Component} from 'react';
 
 export default class Follower extends Component {
 	render() {
-		const {data} = this.props;
+		const {data} = this.props; 
 		return (
 			<div clasName="follower-user">
-				<h3>Followers</h3>
-				{data ? data.map(follower => <h1>{follower.login}</h1>) : ''}
+				<h2>Followers</h2>
+				{data ? data.map(follower => <div className="follower-list">
+																				<img className="user-profile" src={follower.avatar_url} alt="profile" />
+																				<p>{follower.login}</p>
+																			</div>) :''}
+
 			</div>
 		);	
 	}

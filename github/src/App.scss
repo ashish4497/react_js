@@ -6,6 +6,10 @@
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }*/
+body {
+  margin: 0 auto;
+  width: 100%;
+}
 
 .App-header {
   background-color: #282c34;
@@ -51,6 +55,19 @@
     width: 100%;
   }
 }
-.repos-user{
-  text-align:right;
+.follower-user {
+  text-align: center;
+}
+.display-item {
+  display: flex;
+  justify-content:space-around;
+}
+
+.user-profile {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+}
+.repo-description span {
+  padding:10px;
 }
