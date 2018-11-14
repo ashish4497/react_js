@@ -1,4 +1,4 @@
-function  addtodo(value){
+export default function addtodo(value){
     return {
         type:"add-todo",
         value

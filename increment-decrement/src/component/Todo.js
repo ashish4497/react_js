@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
+import {addtodo} from '../action';
+
 
 class Todo extends Component{
     state = {
@@ -13,14 +15,17 @@ class Todo extends Component{
     render(){
         return(
             <div>
-                <input type="text" className="input-btn" placeholder="enter item" onChange={this.handleChange}/>
-                <button className="add-btn">submit</button>
-            </div>
+                <input type="text" className="input-btn" placeholder="enteritem" onChange={this.handleChange}/>
+                <button className="add-btn" onClick = { () => this.props.dispatch(addtodo(this.state.todo))}>submit</button>
+               {
+                   this.props.array.map(todo => <li>{todo}</li>)
+               }
+              </div>
     )
+  
     }
 }
 function mapStateToProps(state) {
-    return {array: state.todoArray}
+    return {array: state.todoarray}
 }
-
 export default connect(mapStateToProps)(Todo);
