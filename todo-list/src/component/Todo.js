@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {addtodo} from '../action';
-
+import {remove} from '../action';
 
 class Todo extends Component{
     state = {
@@ -18,11 +18,10 @@ class Todo extends Component{
                 <input type="text" className="input-btn" placeholder="enteritem" onChange={this.handleChange}/>
                 <button className="add-btn" onClick = { () => this.props.dispatch(addtodo(this.state.todo))}>submit</button>
                {
-                   this.props.array.map(todo => <li>{todo}</li>)
+                   this.props.array.map(todo => <p onClick={()=>this.props.dispatch(remove(todo.id))} id={todo.id}>{todo.value}</p>)
                }
-              </div>
-    )
-  
+            </div>
+        )
     }
 }
 function mapStateToProps(state) {
