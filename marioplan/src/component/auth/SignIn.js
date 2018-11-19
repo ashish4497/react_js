@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
- class SignIn extends Component {
+  class SignIn extends Component {
      state={
       email:'',
       password:''
