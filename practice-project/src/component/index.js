@@ -10,7 +10,7 @@ class Todo extends Component {
     }
     }
     handlechange =(e) => {
-        console.log(e)
+        // console.log(e)
         this.setState({todo:e.target.value})
     }
 
@@ -38,10 +38,10 @@ class Todo extends Component {
         }
     }
 
-
     const mapStateToProps =(state)=>{
         return {
             tododata: state.todo
         }
     }
     export default connect( mapStateToProps,mapDispatchToProps)(Todo);
+    
