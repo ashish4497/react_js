@@ -7,14 +7,14 @@ const Header = () => {
             <div className="navigation">
                  <div className="navigation_list">
                   <ul>
-                  <li><Link to="/">home</Link></li>
-                  <li><i></i><Link to="/dropdown">dropdown</Link></li>
-                  <li><Link to="/generic">generic</Link></li>
-                  <li><Link to="/elements">elements</Link></li>
+                  <li><Link to="/"className="a">home</Link></li>
+                  <li><i></i><Link to="/dropdown"className="a">dropdown</Link></li>
+                  <li><Link to="/generic"className="a">generic</Link></li>
+                  <li><Link to="/elements"className="a">elements</Link></li>
                   </ul>
                 </div>
                <div className="header_title">
-                  <h2><span>Momentum</span> by Pixelarity</h2>
+                  <p><span>Momentum</span> by Pixelarity</p>
                 </div>
             </div>
          </header>
