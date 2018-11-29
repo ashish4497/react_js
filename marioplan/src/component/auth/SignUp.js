@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { signIn } from '../../store/actions/authActions';
 
  class SignUp extends Component {
      state={
