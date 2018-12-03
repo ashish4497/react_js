@@ -122,7 +122,7 @@ header{
   background-image: url('./image/94402.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height:70vh;
+  // height:70vh;
     .main-heading {
       margin:0 auto;
       margin-top: 11rem;
@@ -141,18 +141,18 @@ header{
 /*===button-style===*/
 .button {
   height: 4rem;
-  width: 10rem;
+  width: 8.6rem;
   background: none;
   border: 2px solid white;
   border-radius: 37px;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
-  // margin-bottom: 6rem;
+  margin-bottom:5rem;
 }
 .color-btn {
   height:4rem;
-  width:12rem;
+  width:9rem;
   background: none;
   border:2px solid blue;
   border-radius:40px;
@@ -167,7 +167,6 @@ header{
     background-image: url('./image/download1.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    height:40vh;
   }
  .left-image-heading {
     color: white;
@@ -185,10 +184,11 @@ header{
     padding: 69px;
   }
 }
+
 .main_section {
   display: grid;
-  grid-template-columns:400px 600px;
-  grid-gap:8rem;
+  grid-template-columns:1fr 3fr;
+  grid-gap:3rem;
   padding-top: 4rem;
   padding-bottom:4rem;
 }
@@ -219,9 +219,12 @@ header{
 }
 .right-col {
   display: grid;
-  grid-template-rows: repeat(4.1fr);
-  grid-gap: 25px;
+  // grid-template-rows: repeat(4.1fr);
+  grid-gap: 10px;
   text-align: left;
+  img {
+  max-width:100%;
+}
 }
 .sub_section{
   background-color: #f8f1f1;
@@ -278,6 +281,7 @@ header{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     vertical-align: bottom;
+    margin-bottom:0;
   }
 }
 
@@ -537,6 +541,12 @@ padding: 20px 0;
 }
 
 // ====table====//
+.table-heading {
+  text-align: left;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  padding: 15px 0;
+}
 
 table {
     border-collapse: collapse;
@@ -544,9 +554,16 @@ table {
 }
 
 th, td {
-    padding: 25px;
+    padding: 20px;
     text-align: left;
     border-bottom: 1px solid #ddd;
     font-size: 1.3rem;
   }
-  tr:nth-child(even) {background-color: #f2f2f2;}
+  tr:nth-child(even) {background-color: #f2f2f2;
+  }
+
+  alternate-table{ 
+.alternate-heading{
+  border-bottom: 1px solid black;
+}
+}

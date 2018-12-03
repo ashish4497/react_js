@@ -158,8 +158,6 @@ export default class Elements extends Component {
 						</div>
 						<Table/>
           </div>
-
-
            <div className="2-row-2-col">
            </div>
         </section>

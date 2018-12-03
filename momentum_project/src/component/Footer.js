@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+// import FontAwesome, { Icons } from 'react-native-fontawesome';
 
 const Footer = ()=>{
   return(
@@ -15,7 +16,7 @@ const Footer = ()=>{
          <h2 className="footer-right-col-heading">get in touch</h2>
          <nav>
             <ul>
-               <li><i></i><a href="#">information@uniteltd.</a></li>
+               <li> <a href="#">information@uniteltd.</a></li>
                <li><i></i><a href="#">twitter@uniteltd.</a></li>
                <li><i></i><a href="#">facebook.com@uniteltd.</a></li>
                <li><i></i><a href="#">linkedin.com@uniteltd.</a></li>
