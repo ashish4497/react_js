@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+:root {
+  font-size: 16px;
+}
+
 $color-blue: #0000FF;
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -80,12 +84,20 @@ table {
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #000000; 
+}
+
  // ====header-seacction===//
 header{
   background-color: #282c34;
   .navigation_list ul li {
     list-style-type: none;
-    font-size: 1.4rem;
+    // font-size: 1.4rem;
     text-transform: uppercase;
   }
   ul {
@@ -105,7 +117,7 @@ header{
     padding: 5rem;
   }
   .header_title p {
-    font-size:1.5rem;
+    font-size:1rem;
     color:bisque;
   }
   span {
@@ -113,7 +125,7 @@ header{
   }
   h1 {
     color: white;
-    font-size: 4rem;
+    font-size: 1.6rem;
     margin-top: 15px;
     text-transform: capitalize;
   }
@@ -126,7 +138,7 @@ header{
     .main-heading {
       margin:0 auto;
       margin-top: 11rem;
-      font-size:3rem;
+      font-size:2rem;
       color:white;
       display: inline-block;
       width: 60%;
@@ -134,30 +146,32 @@ header{
   p {
     padding: 5rem;
     color: white;
-    font-size: 2rem;
+    font-size:1.5rem;
     text-align: center;
   }
 }
 /*===button-style===*/
 .button {
-  height: 4rem;
+  font-weight: 400;
+  height: 3.25rem;
   width: 8.6rem;
   background: none;
   border: 2px solid white;
   border-radius: 37px;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: capitalize;
   margin-bottom:5rem;
 }
 .color-btn {
-  height:4rem;
+  font-weight: 400;
+  height: 3.25rem;
   width:9rem;
   background: none;
   border:2px solid blue;
   border-radius:40px;
   color:#0000FF;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: capitalize;
 }
 .two_image_section {
@@ -196,7 +210,7 @@ header{
   grid-gap: 60px;
   display: grid;
   grid-template-rows: auto(5,1fr);
-  font-size: 1.5rem;
+  font-size: 1rem;
   position: realative;
   margin-left: 2rem;
   text-align: left; 
@@ -211,10 +225,10 @@ header{
   grid-template-columns:repeat(2,1fr);
   grid-gap:1.8rem;
   h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 .right-col {
@@ -241,10 +255,10 @@ header{
   padding: 20px;
   padding:3rem;
   h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   p {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 }
 }
@@ -257,15 +271,16 @@ header{
   }
   h2{
     color:white;
-    font-size:2.5rem;
+    font-size:1.6rem;
   }
   p{
     color: white;
-    font-size: 1.8rem;
+    font-size: 1rem;
+    font-family: inherit;
     padding: 2rem;
   }
   .subscribe-input{
-    height: 3.8rem;
+    height: 3.1rem;
     width: 28rem;
     background:white;
     border: 1px solid white;
@@ -274,6 +289,7 @@ header{
     border-bottom-left-radius: 37px;
     color: white;
     font-size: 1rem;
+    font-weight: 400;
     text-transform: capitalize;
     // vertical-align: top;
   }
@@ -298,7 +314,7 @@ header{
     text-transform: capitalize;
   }
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-decoration: capitalize;
   }
 }
@@ -323,9 +339,9 @@ header{
   direction: none;
   color:white;
   text-align:center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding:2rem;
-  font-size: 1.6rem;
+  // font-size: 1.6rem;
 }
   // ===GENERIC-PAGE=== //
  .col-2-img {
@@ -345,12 +361,12 @@ header{
     padding:5rem;
 
     h2 {
-      font-size: 2.2rem;
+      font-size: 1.6rem;
       color:black
     }
 
     p {
-      font-size: 1.4rem;
+      font-size: 1rem;
       color:black;
     }
   }
@@ -368,12 +384,12 @@ header{
     text-align: left;
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.6rem;
       text-transform: capitalize;
     }
     span {
       color:black;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
     button{
       height: 35px;
@@ -386,34 +402,34 @@ header{
     margin-top: 2rem;
   }
   h2{
-    font-size: 3rem;
+    font-size:2rem;
     padding: 1rem 0;
   }
   h3{
-    font-size: 2.8rem;
-    padding: 1rem 0;
-  }
-  h4{
-    font-size: 2rem;
-    padding: 1rem 0;
-  }
-  h5{
     font-size: 1.8rem;
     padding: 1rem 0;
   }
+  h4{
+    font-size:1.6rem;
+    padding: 1rem 0;
+  }
+  h5{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+  }
   h6{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 1rem 0;
   }
   p{
-    font-size:1.4rem;
+    font-size:1rem;
   }
 }
 // =======list-section=========//
   .list-heading {
     h1{ 
     text-align: left;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-transform: capitalize;
     padding: 20px 0;
   }
@@ -424,7 +440,7 @@ header{
 
 .unorder-list{
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: capitalize;
   list-style-position: inside;
   // ul{
@@ -444,7 +460,7 @@ header{
 }
 .order-items{
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: capitalize;
   padding:2px;
   list-style-position: inside;
@@ -484,7 +500,7 @@ header{
   background-color: blue;
   color: white;
   margin-right: 22px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
  .small-btn-fill {
     height: 4rem;
@@ -492,13 +508,13 @@ header{
     background-color: blue;
     color:white;
     margin-right: 60px;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 .small-btn-blank {
   height: 3.1rem;
   width: 9.9rem;
   color:blue;
-  font-size: 1.3rem;
+  font-size: 1rem;
   }
 // =====action-btn-section-2===//
 .little-btn {
@@ -536,14 +552,14 @@ padding: 20px 0;
   padding: 20px 0;
   p{
     border-left: 10px solid gray;
-    padding-left: 2rem;
+    padding-left:1rem;
   }
 }
 
 // ====table====//
 .table-heading {
   text-align: left;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-transform: capitalize;
   padding: 15px 0;
 }
@@ -556,14 +572,32 @@ table {
 th, td {
     padding: 20px;
     text-align: left;
+    font-size:1rem;
+  }
+  td {
     border-bottom: 1px solid #ddd;
-    font-size: 1.3rem;
   }
   tr:nth-child(even) {background-color: #f2f2f2;
   }
 
   alternate-table{ 
 .alternate-heading{
-  border-bottom: 1px solid black;
+  border: 1px solid black;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    font-size:1rem;
+  }
+  td {
+    border: 1px solid #ddd;
+  }
+  tr:nth-child(even) {background-color: #f2f2f2;
+  }
+
 }
 }
