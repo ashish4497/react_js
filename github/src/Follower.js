@@ -7,9 +7,9 @@ export default class Follower extends Component {
 			<div clasName="follower-user">
 				<h2>Followers</h2>
 				{data ? data.map(follower => <div className="follower-list">
-																				<img className="user-profile" src={follower.avatar_url} alt="profile" />
-																				<p>{follower.login}</p>
-																			</div>) :''}
+				<img className="user-profile" src={follower.avatar_url} alt="profile" />
+				<p>{follower.login}</p>
+			</div>) :''}
 
 			</div>
 		);	

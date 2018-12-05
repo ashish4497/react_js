@@ -50,16 +50,14 @@ class Header extends Component {
   		item = <div></div>	
   	} else {
   		item = <div>
-  							<User data={this.state.data}/>
-  							<div className="display-item">
-  								<Repo data ={this.state.userRepos}/>
-  								<Follower data={this.state.userFollower}/>
-  							</div>
+				<User data={this.state.data}/>
+				<div className="display-item">
+					<Repo data ={this.state.userRepos}/>
+					<Follower data={this.state.userFollower}/>
+				</div>
   					</div>
   	 }
-  	
-  	
-    return (
+  	return (
       <div className='header'>
       	<header className='main-head'>
       		<div className='left-side'>
