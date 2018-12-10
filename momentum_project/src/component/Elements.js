@@ -3,6 +3,7 @@ import Footer from './Footer';
 import Elementheader from './Elementheader'
 import Subscribe from'./Subscribe';
 import Table from './Table';
+import Form from './Form';
 
 export default class Elements extends Component {
   render() {
@@ -159,6 +160,8 @@ export default class Elements extends Component {
 						<Table/>
           </div>
            <div className="2-row-2-col">
+
+           	<Form/>
            </div>
         </section>
         <Subscribe/>

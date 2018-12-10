@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import 'form.scss';
+
 :root {
   font-size: 16px;
 }
@@ -281,7 +283,7 @@ header{
   }
   .subscribe-input{
     height: 3.1rem;
-    width: 28rem;
+    width: 20rem;
     background:white;
     border: 1px solid white;
     border-bottom: none;
@@ -485,6 +487,31 @@ header{
     text-align: left; 
   }
 }
+// ===drop-down===//
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:  #68645f;
+  min-width: 150px;
+  box-shadow:#68645f;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #68645f}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 // =====button-seacation=====//
 .right-btn-heading {
   text-align: left;
@@ -598,6 +625,5 @@ th, td {
   }
   tr:nth-child(even) {background-color: #f2f2f2;
   }
-
 }
 }

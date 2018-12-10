@@ -8,7 +8,17 @@ const Header = () => {
         <div className="navigation_list">
           <ul>
             <li><Link to="/"className="a">home</Link></li>
-            <li><i></i><Link to="/dropdown"className="a">dropdown</Link></li>
+            <li>
+            <div class="dropdown">
+              <li><Link to="/"className="a">dropdown</Link></li>
+              <div class="dropdown-content">
+                <a href="#">option 1</a>
+                <a href="#">option 2</a>
+                <a href="#">option 3</a>
+                <a href="#">submenu</a>
+              </div>
+            </div>
+            </li>
             <li><Link to="/generic"className="a">generic</Link></li>
             <li><Link to="/elements"className="a">elements</Link></li>
           </ul>
