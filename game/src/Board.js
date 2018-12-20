@@ -71,30 +71,26 @@ export default class Board extends Component {
       status = 'Next player:' + (this.state.xIsNext ? 'X' : 'O');
     }
 
-
-    // const back = this.previous(this.state.history);
-    // if (back) {
-    //   status = 'Previous olayer:' + (this.state.xIsNext ? 'o' : 'x');
-    // } 
-
     return (
       <Fragment>
         <div className="status">{status}</div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+        <div className="box" >
+          <div className="board-row">
+            {this.renderSquare(0)}
+            {this.renderSquare(1)}
+            {this.renderSquare(2)}
+          </div>
+          <div className="board-row">
+            {this.renderSquare(3)}
+            {this.renderSquare(4)}
+            {this.renderSquare(5)}
+          </div>
+          <div className="board-row">
+            {this.renderSquare(6)}
+            {this.renderSquare(7)}
+            {this.renderSquare(8)}
+          </div>
+          </div>
         <div>
           <button className="move-back" onClick = {this.previous}>undo</button>
         </div>

@@ -1,33 +1,4 @@
 
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -46,7 +17,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -81,11 +52,12 @@ table {
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
    margin: 20px;
+   background: url('https://www.spellbindersblog.com/wp-content/uploads/2017/08/082817-Miranda-Featured-1080-1080x610.jpg');
+   background-repeat: no-repeat;
+   background-size:cover;
 }
 
-ol, ul {
-  padding-left: 30px;
-}
+
 
 .board-row:after {
   clear: both;
@@ -95,47 +67,68 @@ ol, ul {
 
 .status {
   margin-bottom: 10px;
-  text-align:left;
-  font-size: 30px;
-  color:gray;
+  font-size: 4rem;
+  color: #74b16d;
   text-transform: capitalize;
+  font-weight: 650;
+  text-shadow: 6px 3px 5px #eeecda; ;
 }
 
 .square {
-  background: #fff;
-  border: 2px solid #999;
+  background:#54774e;
+  border: 5px solid #cfb099;
   float: left;
-  font-size: 50px;
+  font-size:6rem;
   font-weight: bold;
   line-height: 34px;
-  height: 60px;
+  height:22vh;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 60px;
-  color:red;
+  width:15vw;
+  color:#cfd3cc;
 }
 
 .square:focus {
   outline: none;
 }
 
-.kbd-navigation .square:focus {
-  background: #ddd;
-}
-
-/* .game {
-  display: flex;
+.game {
+  display:grid;
   flex-direction: row;
-} */
+  place-content: center;
+}
 
 .game-info {
   margin-left: 20px;
 }
 .move-back{
-  padding: 8px;
-  margin-top: 10px;
-  text-transform: capitalize;
-  background: transparent;
+  outline: none;
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  margin-top:30px;
+  }
+
+.move-back:hover {
+  background-color: #ff5722;
+      box-shadow: 0px 15px 20px rgba(119, 29, 0, 0.73);
+  color: #fff;
+  transform: translateY(7px);
+}
+
+.center {
+  text-align: center;
 }
