@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
-import Input from './Input';
-import Items from './Items'
+import './App.scss';
+import Toggle from './Toggle'
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Input/>
-        <Items/>
+      <div className="App">
+        <Toggle/>
       </div>
     );
   }

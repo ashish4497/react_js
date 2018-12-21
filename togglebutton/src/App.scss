@@ -1,0 +1,86 @@
+.App {
+	text-align: center;
+	margin: (0,auto)
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Press Start 2P', cursive;
+	
+}
+
+.container {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.button { 
+	margin-top: 50px;	
+	border: 2px solid black;
+	padding: 3px;
+	width: 80px;
+	height: 20px;
+	cursor: pointer;
+	display: block;
+	& .wrapper {
+		display: block;
+		width: 100%;
+		height: 100%;
+		& .text {
+			display: block;
+			background:green;
+			color: white;
+			padding: 3px;
+			text-transform: uppercase;
+			text-align: center;
+			width: 50%;
+			height: 100%;
+			box-sizing: border-box;
+			transition: transform 100ms ease-in;
+			pointer-events: none;
+			user-select: none;
+			font-size: 1.2rem;
+			content: 'off';
+			position: relative;
+			& .off,
+			& .on {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: opacity 100ms linear;
+				font-size: 12px;
+			}
+			& .on {
+				opacity: 0;
+			}
+		}
+	}
+	& .input {
+		display: none;
+		&:checked + .wrapper > .text {
+			transform: translatex(100%);
+			& .on {
+				opacity: 1;
+				background: red;
+			}
+			& .off {
+				opacity: 0;
+			}
+		}
+  }
+}
+.btn {
+	margin-top:20px;
+	height:30px;
+	width: 50px;
+	background: transparent;
+	outline: none;
+}
