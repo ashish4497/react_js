@@ -10,10 +10,10 @@ const Userlist = (props) => {
 		<Fragment>
 			<div className="user_detail">
 				<img src={user.avatar_url} className="user_icon"></img>
-				<p>{user.name}</p>
+				<p>Name : {user.name}</p>
 				<p> following :{user.following}</p>
 				<p> followers :{user.followers}</p>
-				<button className="compair" onClick={() => props.handlesubmit("hello")}>copmare</button>
+				<button className="compair" onClick={props.handlesubmit}>copmare</button>
 			</div>
 		</Fragment >
 	)
