@@ -3,7 +3,7 @@ import React, {Fragment } from 'react'
 const Userlist = (props) => {
 	let value  = props.value;
 	// console.log(value)
-	let user = value ? value : {};
+	let user = value ? value :" Loading...";
 	// console.log(user)
 
 	return (
