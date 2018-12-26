@@ -9,7 +9,8 @@ class Shoppingcart extends Component {
     super()
     this.state = {
       shoppingItem :[],
-      cart:[]
+      cart:[],
+      count : 0
     }  
   }
   
@@ -26,10 +27,13 @@ class Shoppingcart extends Component {
   }
 
   handleSubmit = (index) => {
-    let count= 0;
-    if(this.state.cart.includes(index)) 
-    console.log(count++)
-    // this.state.shoppingItem[index].count=0;
+    // let count = 0;
+    
+    if(this.state.cart.includes(index)){
+      this.setState({
+        count : this.state.count++
+      })
+    } 
     this.setState({
       cart :[...this.state.cart, this.state.shoppingItem[index]]
 		 },()=>console.log(this.state.cart,"add items"))

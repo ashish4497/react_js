@@ -13,13 +13,15 @@ class Addcart extends Component {
                {cartitem.map((val,index) => { 
                 return (
                   <div className="display-item">
-                    <img className="product-image" src={require("../images/876661122392077_1.jpg")} alt="productImage"></img>
-                    <span className="title">{val.title}</span>  
-                    <span className="style">{val.style}</span>
-                    <span className="currency">({val.currencyFormat}{val.price})</span>
                     <div>
                       <a className="delete-btn" onClick={this.props.deleteAdditems} id={index}>X</a>
                     </div>
+                    <div>
+                    <img className="product-image" src={require("../images/876661122392077_1.jpg")} alt="productImage"></img>
+                   </div>
+                    <span className="title">{val.title}</span>  
+                    <span className="style">{val.style}</span>
+                    <span className="currency">({val.currencyFormat}{val.price})</span>  
                   </div>  
                 )}
                 )}

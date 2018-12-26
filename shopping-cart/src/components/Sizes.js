@@ -16,10 +16,7 @@ class Sizes extends Component {
           <div className="size-icon-bottom">
             <input type="checkbox" value="xl"/>
             <input type="checkbox" value="xxl"/>      
-          </div>
-          <div className="note">
-            <p>Leave a star on Github if this repository was useful :)</p>
-          </div>    
+          </div>   
         </div>
       </Fragment>
     )
