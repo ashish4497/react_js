@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.main_section{
+  display: grid;
+  grid-template-columns:200px 2fr;
+}
+.shopping_list {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap:15px;
+  text-align: center;
+  .amount{
+    font-size: 1.5rem;
+    padding:15px;
+  }
+  .currency{
+    font-size: 1rem;
+    padding-bottom: 10px;
+  }
+  .product_name{
+    text-transform: capitalize;
+    font-size: 17px;
+    font-weight: 500;
+  }
+ .btn {
+   width:100%;
+   height:40px;
+   background: #1b1a20;
+   color:white;
+   font-size: 1.2rem;
+   border: none;
+   outline: none;
+   font-family: Roboto,sans-serif;
+   margin-bottom:0px;
+   &.btn:hover {
+     color:white;
+     background: #e3b93b;
+     cursor:pointer;
+     font-size: 1.3rem;
+   }
+  }
+}
+.product-catogery:hover{
+  border:2px solid whitesmoke;  
+}
+// style left side size button
+.size_checkbox{
+  .heading {
+    h1 {
+      text-align: left;
+      font-size: 1.5rem;
+      padding:10px;
+      font-weight: 00;
+    }
+  }
+}
+.checkdiv1 {
+  opacity: 0;
+  position: relative;
+}
+.product-image{
+  width:100%;
+}
+
+//Header seaction
+.header-deaction{
+  background: #1b1a20;
+  display: flex;
+  justify-content: space-between;
+  padding:20px;
+  h1{
+    color:wheat;
+    font-size: 1.5rem;
+    text-transform: capitalize;   
+  }
+  .order{
+    .text{
+      font-size:1.4rem;
+      text-transform: capitalize;
+      color:wheat;
+      margin-right:10px;
+    }
+  }
+  select {
+    background:white;
+    appearance: none;
+    height:20px;
+    font-size:0.7rem;
+    padding:3px;
+  }
+}
+//hambergarmenu
+.topnav #additems {
+  display: none;
+  width:400px;
+}
+
+.topnav p {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  background: #1b1a20;
+}
+.topnav{
+  position: absolute;
+  right:0;
+  top: 50px;
+  background: #1b1a20;
+  width:450px;
+}
+.topnav p.icon {
+  background:#1b1a20;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color:white;
+  cursor: pointer;
+}
+
+
+//cart display items
+.display-item{
+  color: white;
+  padding:15px;
+  display:inline-block;
+  .product-image{
+    height:50px;
+    width:50px;
+    padding-right: 10px;
+  }
+  .product-image {
+    text-align: left;
+  }
+  .title{
+    font-size:1.2rem;
+    text-align: right; 
+  }
+  .style{
+    text-align: right;
+  }
+  .currency {
+    color:yellow;
+  }
+  .delete-btn {
+    cursor:pointer;
+    color: white;
+    font-weight:500;
+  &:hover{
+      font-size:1.1rem;
+    }
+  }
+}
+
