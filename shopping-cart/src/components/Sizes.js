@@ -1,6 +1,8 @@
 import React, {Component,Fragment} from 'react';
 class Sizes extends Component {
   render(){
+    // let handleClick = this.props.handleClick;
+    // console.log(handleClick,"items")
     return(
       <Fragment>
         <div className="size_checkbox">
@@ -8,14 +10,14 @@ class Sizes extends Component {
            <h1>Sizes :</h1>
           </div>
           <div className="size-top-icon">
-            <input type="checkbox" value ="m"/>
-            <input type="checkbox" value="ml"/>
-            <input type="checkbox" value="l"/>
-            <input type="checkbox" value ="s"/>
+            <input type="checkbox" value ="M" onClick={(e)=>this.props.handleClick(e)}/>
+            <input type="checkbox" value="ML" onChange={(e)=>this.props.handleClick(e)}/>
+            <input type="checkbox" value="L"  onChange={(e)=>this.props.handleClick(e)}/>
+            <input type="checkbox" value ="S" onChange={(e)=>this.props.handleClick(e)}/>
           </div>
           <div className="size-icon-bottom">
-            <input type="checkbox" value="xl"/>
-            <input type="checkbox" value="xxl"/>      
+            <input type="checkbox" value="XL" onChange={(e)=>this.props.handleClick(e)}/>
+            <input type="checkbox" value="XXl" onChange={(e)=>this.props.handleClick(e)}/>      
           </div>   
         </div>
       </Fragment>

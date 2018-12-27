@@ -16,7 +16,7 @@ class Shoppingitems extends Component {
             <div className ="amount">
             <span className="currency">{value.currencyFormat}</span>
             <span className="price">{value.price}</span>
-            <button  className="btn" onClick={() => this.props.handleSubmit(index)}>Add to cart</button>
+            <button  className="btn" onClick={() => this.props.handleSubmit(index) } id={index}>Add to cart</button>
             </div>
           </div>
           )

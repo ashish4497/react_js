@@ -10,7 +10,8 @@ class Shoppingcart extends Component {
     this.state = {
       shoppingItem :[],
       cart:[],
-      count : 0
+      count : 0,
+      filter:[]
     }  
   }
   
@@ -26,17 +27,17 @@ class Shoppingcart extends Component {
     );
   }
 
-  handleSubmit = (index) => {
-    // let count = 0;
-    
-    if(this.state.cart.includes(index)){
+  handleSubmit = (id) => {
+    // console.log(index)
+    if(this.state.cart.includes(id)){
       this.setState({
-        count : this.state.count++
+        count :this.state.count++
       })
+      console.log(this.state.count++,"adding index")
     } 
     this.setState({
-      cart :[...this.state.cart, this.state.shoppingItem[index]]
-		 },()=>console.log(this.state.cart,"add items"))
+      cart :[...this.state.cart, this.state.shoppingItem[id]]
+		 })
 	}
   
 
@@ -63,19 +64,26 @@ class Shoppingcart extends Component {
    this.setState({cart:this.state.cart})
   }
 
+  handleClick = (e) => {
+    const {shoppingItem} = this.state;
+    let checkItem = shoppingItem.filter((v) => v.availableSizes.includes(e.target.value));
+    console.log(checkItem)
+    // this.setState({filter:checkItem}) 
+  }
+
   render() { 
     return (
       <Fragment>
-         <Header header={this.state.shoppingItem} higest={this.higest} />
+         <Header header={this.state.filter} higest={this.higest} />
          <Addcart  myFunction = {this.myFunction} cart = {this.state.cart} 
           deleteAdditems = {this.deleteAdditems}
          />
         <div className= "main_section">
           <div className="size_sction">
-            <Sizes/>
+            <Sizes handleClick={this.handleClick}/>
           </div>
           <div className= "main_wrapper">
-            <ShoppingItems shoppingdata={this.state.shoppingItem} handleSubmit={this.handleSubmit} className="detai"/>           
+            <ShoppingItems shoppingdata={this.state.filter} handleSubmit={this.handleSubmit} className="detai"/>           
           </div>
         </div>
       </Fragment>
