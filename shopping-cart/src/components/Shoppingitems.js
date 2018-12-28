@@ -11,7 +11,7 @@ class Shoppingitems extends Component {
         {info.map((value,index) => {
         return (
           <div  key={index} className="product-catogery"> 
-            <img className="product-image" src={require("../images/876661122392077_1.jpg")} alt="productImage"></img>
+            <img className="product-image" src={require(`../images/${value.sku}_1.jpg`)} alt="productImage"></img>
             <p className="product_name">{value.title}</p>
             <div className ="amount">
             <span className="currency">{value.currencyFormat}</span>

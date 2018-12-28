@@ -3,6 +3,7 @@ class Sizes extends Component {
   render(){
     // let handleClick = this.props.handleClick;
     // console.log(handleClick,"items")
+    var sizes = ["M","ML","L","S","XL","XXl"]
     return(
       <Fragment>
         <div className="size_checkbox">
@@ -10,15 +11,19 @@ class Sizes extends Component {
            <h1>Sizes :</h1>
           </div>
           <div className="size-top-icon">
-            <input type="checkbox" value ="M" onClick={(e)=>this.props.handleClick(e)}/>
-            <input type="checkbox" value="ML" onChange={(e)=>this.props.handleClick(e)}/>
-            <input type="checkbox" value="L"  onChange={(e)=>this.props.handleClick(e)}/>
-            <input type="checkbox" value ="S" onChange={(e)=>this.props.handleClick(e)}/>
+          {
+            sizes.map((v) => {
+              return (
+                <span className="size-value">
+                <label>
+                <input type="checkbox" value={v} onChange={(e)=>this.props.handleClick(e)}/>
+                </label>
+                {v}
+                </span>
+              )                
+            })
+          }
           </div>
-          <div className="size-icon-bottom">
-            <input type="checkbox" value="XL" onChange={(e)=>this.props.handleClick(e)}/>
-            <input type="checkbox" value="XXl" onChange={(e)=>this.props.handleClick(e)}/>      
-          </div>   
         </div>
       </Fragment>
     )

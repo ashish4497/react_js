@@ -55,9 +55,10 @@ table {
   grid-template-columns: repeat(4,1fr);
   grid-gap:15px;
   text-align: center;
+  padding-top:15px;
   .amount{
     font-size: 1.5rem;
-    padding:15px;
+    padding:25px;
   }
   .currency{
     font-size: 1rem;
@@ -199,4 +200,11 @@ table {
     }
   }
 }
-
+.size-value{
+  font-size:1.3rem;
+  padding: 10px;
+  input{
+    height:20px;
+    widows: 20px;
+  }
+}

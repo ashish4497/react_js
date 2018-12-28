@@ -14,11 +14,9 @@ class App extends Component {
     );
   }
 }
-const mapDispatchToProps = (dispatch) => {
-  return {
-    increment: () => dispatch(increment()),
-    decrement: () => dispatch(decrement())
-  }
+const mapDispatchToProps = {
+  increment,
+  decrement
 }
 const mapStatetoprops = (state) => {
   return {

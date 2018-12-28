@@ -68,13 +68,15 @@ class Shoppingcart extends Component {
     const {shoppingItem} = this.state;
     let checkItem = shoppingItem.filter((v) => v.availableSizes.includes(e.target.value));
     console.log(checkItem)
-    // this.setState({filter:checkItem}) 
+    this.setState({
+      filter:checkItem
+    }) 
   }
 
   render() { 
     return (
       <Fragment>
-         <Header header={this.state.filter} higest={this.higest} />
+         <Header header={this.state.filter.length ? this.state.filter : this.state.shoppingItem} higest={this.higest} />
          <Addcart  myFunction = {this.myFunction} cart = {this.state.cart} 
           deleteAdditems = {this.deleteAdditems}
          />
@@ -83,7 +85,7 @@ class Shoppingcart extends Component {
             <Sizes handleClick={this.handleClick}/>
           </div>
           <div className= "main_wrapper">
-            <ShoppingItems shoppingdata={this.state.filter} handleSubmit={this.handleSubmit} className="detai"/>           
+            <ShoppingItems shoppingdata={this.state.filter.length ? this.state.filter : this.state.shoppingItem} handleSubmit={this.handleSubmit} className="detai"/>           
           </div>
         </div>
       </Fragment>

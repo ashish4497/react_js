@@ -9,7 +9,7 @@ class Header extends Component {
     return(
       <Fragment>
         <div className="header-deaction">
-          <h1> ({length}) product(s) founded</h1>
+          <h1> ({length}) product(s) found</h1>
         <div className="order">
           <span className="text">order by</span>
           <select name= "select" className="select-section" onClick={(e) => this.props.higest(e)}>

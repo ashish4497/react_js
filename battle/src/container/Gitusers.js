@@ -22,13 +22,16 @@ class Gitusers extends Component {
 			});
 	}
 
-	handlesubmit = (e) => {
+	handlesubmit = (id) => {
+	// 	this.state.compair.forEach(elem => {
+	// 		if(elem.id === this.state.usersinfo[id].id)return;
+	// 	console.log(elem.id,this.state.usersinfo[id].id,"hell")
+	// })
 		// let id = e.target.id;
 		// console.log(id, "dfghjkl")
 		this.setState({
-      compair : [...this.state.compair, this.state.usersinfo]
-		})
-		console.log(this.state.compair,"dta")
+      compair : [...this.state.compair, this.state.usersinfo[id]]
+		},()=>console.log(this.state.compair,"dta"))
 	}
 
 	handleDelete = (e) => {
@@ -41,11 +44,12 @@ class Gitusers extends Component {
   }
 	render() {
 		return (
-			<div>			
-				 {/* <usersinfo user={this.state.usersinfo} click={this.handleClick} />	 */}
-				{
-					this.state.usersinfo.map((user,id) => <Userlist handlesubmit = {this.handlesubmit } value={user} />)
-				}
+			<div>
+				<div className="main-container">				
+					{
+						this.state.usersinfo.map((user,id) => <Userlist key = {id} id = {id} handlesubmit = {this.handlesubmit } value={user} />)
+					}
+				</div>
 				<Compair user={this.state.compair} click={this.handleDelete} />
 			</div>
 		)
