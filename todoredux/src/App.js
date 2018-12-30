@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { addtodo } from './action';
+import { addtodo,deletetodo  } from './action';
 import {connect} from 'react-redux'
 
 
@@ -25,18 +25,19 @@ class App extends Component {
       value: "",
     })
   }
-  handdledelete = (id) => {
-    this.props.addtodo.splice(id,1)
+  handdledelete = (e) => {
+    this.props.deletetodo(e.target.id)
   }
 
   render() {
+    const { listTodo } = this.props;
     return (
       <div className="App">      
         <input type="text" placeholder="Enter value" onChange={this.handleChange} value={this.state.value}/>
         <button onClick={this.hadelSubmit}>Add</button>
           <div className="display_list">
           {
-            this.props.listTodo.map((value, index)=> {
+           listTodo && listTodo.map((value, index)=> {
               return (
                 <div className="item_display">
                <p>{value} 
@@ -52,7 +53,8 @@ class App extends Component {
   }
 }
 const mapDispatchToProps ={
-  addtodo 
+  addtodo,
+  deletetodo 
 }
 const mapStateToProps = (state)=> {
  return {

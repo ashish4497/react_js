@@ -4,3 +4,11 @@ export const addtodo = (value) => {
     value 
   }
 }
+
+export const deletetodo = (id) => {
+  console.log(id)
+  return {
+    type:"DELETLIST",
+    id
+  }
+}
