@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { addtodo,deletetodo  } from './action';
 import {connect} from 'react-redux'
 

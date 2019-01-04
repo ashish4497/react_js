@@ -8,20 +8,21 @@ class Shoppingitems extends Component {
     return(
       <Fragment>
         <div className="shopping_list">
-        {info.map((value,index) => {
-        return (
-          <div  key={index} className="product-catogery"> 
-            <img className="product-image" src={require(`../images/${value.sku}_1.jpg`)} alt="productImage"></img>
-            <p className="product_name">{value.title}</p>
-            <div className ="amount">
-            <span className="currency">{value.currencyFormat}</span>
-            <span className="price">{value.price}</span>
-            <button  className="btn" onClick={() => this.props.handleSubmit(index) } id={index}>Add to cart</button>
+          {info.map((value,index) => {
+            return (
+            <div  key={index} className="product-catogery"> 
+              <img className="product-image" src={require(`../images/${value.sku}_1.jpg`)} alt="productImage"></img>
+              <p className="product_name">{value.title}</p>
+              <div className ="amount">
+              <span className="currency">{value.currencyFormat}</span>
+              <span className="price">{value.price}</span>
+              <button  className="btn" onClick={() => this.props.handleSubmit(index) } id={index}>Add to cart</button>
+              </div>
             </div>
-          </div>
-          )
-         })}          
-         </div>
+            )
+          }) 
+          }       
+        </div>
       </Fragment>
     )
   }

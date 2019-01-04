@@ -42,7 +42,7 @@ class Shoppingcart extends Component {
   
 
   higest = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     const {shoppingItem} =this.state;
     let shoritem = (e.target.value === 'volvo') ? shoppingItem.sort((a,b) => a.price-b.price) :
     shoppingItem.sort((a,b) => b.price-a.price)
