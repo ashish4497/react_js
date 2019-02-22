@@ -40,7 +40,6 @@ class Shoppingcart extends Component {
 		 })
 	}
   
-
   higest = (e) => {
     // console.log(e.target.value);
     const {shoppingItem} =this.state;
